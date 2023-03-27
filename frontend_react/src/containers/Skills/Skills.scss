@@ -1,0 +1,35 @@
+.skills {
+    min-height: 100vh;
+    padding-top: 5em;    
+
+    &__heading {
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 100px));
+        gap: 4em;
+        justify-content: center;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__wrapper {
+                // width: 5em;
+                // height: 5em;
+                padding: 1em;
+                border-radius: 50%;
+                background-color: hsla(var(--clr-white), .95);
+            }
+
+            &__name {
+                font-size: var(--fs-xs);
+            }
+        }
+    }
+}

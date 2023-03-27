@@ -1,0 +1,50 @@
+.app {
+    min-height: 100vh;        
+}
+
+body {
+    margin: 0;
+    font-family: var(--ff-inter);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
+    color: rgb(80, 80, 80);
+    background-color: rgb(215, 215, 215);
+    line-height: 1.6;
+}
+  
+img {
+    display: block;
+    max-width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+h1 {font-size: var(--fs-h1);}
+h2 {font-size: var(--fs-h2);}
+h3 {font-size: var(--fs-h3);}
+
+.container {
+    width: min(94%, 1200px);
+    margin: 0 auto;
+
+    @media screen and (min-width: 700px) {
+        width: min(88%, 1200px);
+    }
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

@@ -1,0 +1,43 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+
+:root {
+  --ff-inter: 'Inter', sans-serif;
+
+  --fs-h1: 2.625rem;
+  --fs-h2: 1.75rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  --fs-sm: .875rem;
+  --fs-xs: .625rem;
+
+  --fw-bold: 700;
+  --fw-semi-bold: 600;
+  --fw-medium: 500;
+  --fw-regular: 400;
+
+  --clr-white: 0, 0%, 100%;
+  --clr-black: 0, 0%, 0%;
+  --clr-primary: 101, 46%, 65%;
+  // color: hsl(101, 46%, 65%);
+
+  --padding-left: 2vw;
+}
+
+@media screen and (min-width: 960px) {
+  :root {
+    --fs-h1: 3rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.25rem;
+    --fs-sm: 1rem;
+    --fs-xs: .75rem; 
+  }
+}
+
+

@@ -1,0 +1,217 @@
+    // min-height: 100vh;
+    // background-color:#99c2ff;
+    // background-image:
+    // radial-gradient(at 87% 82%, hsla(286,91%,73%,1) 0px, transparent 50%),
+    // radial-gradient(at 89% 95%, hsla(320,90%,61%,1) 0px, transparent 50%);
+
+    // background-color:#99cfff;
+    // background-image:
+    // radial-gradient(at 97% 93%, hsla(159,99%,71%,1) 0px, transparent 50%),
+    // radial-gradient(at 18% 88%, hsla(214,62%,66%,1) 0px, transparent 50%);
+
+    // background-color:#99cfff;
+    // background-image:
+    // radial-gradient(at 97% 93%, hsla(159,99%,71%,1) 0px, transparent 50%),
+    // radial-gradient(at 18% 88%, hsl(194, 100%, 50%) 0px, transparent 50%);
+
+.home {
+    min-height: 100vh;
+    color: hsla(var(--clr-white), .95);
+    position: relative;
+    padding-top: 25vh;
+    z-index: 1;
+    // background-color: rgb(161, 161, 161);
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 40%, 60% 100%, 0 100%);
+        z-index: -1;
+        // background: linear-gradient(180deg, #00C2FF 0%, hsla(297, 98%, 52%, .85) 100%);
+        background-color:hsla(230,76%,73%,1);
+        background-image:
+        radial-gradient(at 8% 99%, rgb(169, 222, 145) 0px, transparent 50%),
+        radial-gradient(at 54% 26%, rgb(117, 227, 178) 0px, transparent 50%),
+        radial-gradient(at 95% 12%, hsla(203,40%,47%,1) 0px, transparent 50%),
+        radial-gradient(at 66% 45%, hsla(256,38%,47%,1) 0px, transparent 50%);
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        // border: 1px solid hotpink;
+    }
+
+    &__left {
+        max-width: 650px;
+        
+        &__primary {
+            margin-bottom: .75em;
+            line-height: 1.25;
+        }
+
+        &__secondary {
+            font-size: var(--fs-sm);
+            margin-bottom: 4em;
+        }
+
+        &__btn-more {
+            position: relative;
+
+            .btn-scroll {
+                position: absolute;
+                width: 46px;
+                height: 80px;
+                border: 3px solid hsla(var(--clr-white), .95);
+                border-radius: 2em;
+                display: flex;
+
+                @keyframes scrollDown {
+                    0% {
+                      transform: translate(50%, 0);
+                      opacity: 0;
+                    }
+                    40% {
+                      opacity: 1;
+                    }
+                    80% {
+                      transform: translate(50%, 45px);
+                      opacity: 0;
+                    }
+                    100% {
+                      opacity: 0;
+                    }
+                  }
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    right: 50%;
+                    top: 10px;
+                    width: 11px;
+                    height: 15px;
+                    transform: translateX(50%);
+                    background-color: hsla(var(--clr-white), .95);
+                    border-radius: 50%;
+                    animation: scrollDown 2s infinite;
+                }
+            }
+        
+            svg {
+                margin-left: .5em;
+                animation: arrowDownRotate 1.5s infinite;
+            }
+        }
+    }
+
+    &__right {
+        display: none;
+        // border: 1px solid hotpink;   
+
+        @media screen and (min-width: 700px) {
+            display: flex;
+            // height: 320px;
+            height: 43vh;
+            width: 400px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            &__logo-container {
+                width: 100px;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: hsla(var(--clr-white), .95);
+                padding: 1rem;
+                box-shadow: 0px 4px 4px 1px hsla(var(--clr-black), .25);
+                border-radius: 50%;
+                position: absolute;
+
+                --base-size: 100px;
+                @mixin dimension($base, $size) {
+                    width: calc($base * $size);
+                    height: calc($base * $size);
+                }
+
+                &:nth-child(1) {
+                    @include dimension(var(--base-size), 1.1);
+                    right: 50%;
+                }
+                &:nth-child(2) {
+                    @include dimension(var(--base-size), .75);
+                    right: 20%;
+                    bottom: 60%;
+                }
+                &:nth-child(3) {
+                    @include dimension(var(--base-size), .75);
+                    right: 70%;
+                    bottom: 40%;
+                }
+                &:nth-child(4) {
+                    @include dimension(var(--base-size), .8);
+                    right: 45%;
+                    bottom: 40%;
+                }
+                &:nth-child(5) {
+                    @include dimension(var(--base-size), .55);
+                    right: 25%;
+                    bottom: 40%;
+                }
+                &:nth-child(6) {
+                    @include dimension(var(--base-size), .60);
+                    right: 85%;
+                    bottom: 20%;
+                }
+                &:nth-child(7) {
+                    @include dimension(var(--base-size), .7);
+                    right: 55%;
+                    bottom: 10%;
+                }
+                &:nth-child(8) {
+                    @include dimension(var(--base-size), .55);
+                    right: 37%;
+                    bottom: 25%;
+                }
+                &:nth-child(9) {
+                    @include dimension(var(--base-size), .85);
+                    right: 15%;
+                    bottom: 7%;
+                }
+            }
+
+            img {
+                // border: 1px solid khaki;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        @media screen and (min-width: 950px) {
+            // height: 350px;
+            height: 48vh;
+            width: 450px;
+            
+            &__logo-container {
+                --base-size: 110px;
+            }
+        }
+
+        @media screen and (min-width: 1220px) {
+            // height: 420px;
+            height: 60vh;
+            width: 570px;
+            right: 2vw;
+            
+            &__logo-container {
+                --base-size: 130px;
+            }
+        }
+    }
+}
+

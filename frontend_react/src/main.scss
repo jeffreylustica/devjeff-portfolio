@@ -7,9 +7,10 @@
 
 
 :root {
-  --ff-inter: 'Inter', sans-serif;
+  --ff-inter: 'Hanken Grotesk', sans-serif;
+  --ff-bad-script: 'Bad Script', cursive;
 
-  --fs-h1: 2.625rem;
+  --fs-h1: 3.125rem;
   --fs-h2: 1.75rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
@@ -23,18 +24,17 @@
 
   --clr-white: 0, 0%, 100%;
   --clr-black: 0, 0%, 0%;
-  --clr-primary: 101, 46%, 65%;
-  // color: hsl(101, 46%, 65%);
+  --clr-primary: 181, 90%, 24%;
 
   --padding-left: 2vw;
 }
 
 @media screen and (min-width: 960px) {
   :root {
-    --fs-h1: 3rem;
+    --fs-h1: 3.5rem;
     --fs-h2: 2rem;
     --fs-h3: 1.5rem;
-    --fs-body: 1.25rem;
+    --fs-body: 1.125rem;
     --fs-sm: 1rem;
     --fs-xs: .75rem; 
   }

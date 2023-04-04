@@ -8,7 +8,7 @@
     // color: hsla(var(--clr-white), .95);
     padding: 1em var(--padding-left);
     backdrop-filter: blur(5px);
-    box-shadow: 0px 5px 10px -10px hsla(var(--clr-black), .75);
+    // box-shadow: 0px 5px 10px -10px hsla(var(--clr-black), .75);
 
     &__logo {
         // padding: .8em 0; 
@@ -40,7 +40,7 @@
         a {
             padding: 1em;
             // color: inherit;
-            color: rgb(80, 80, 80);
+            color: hsla(var(--clr-white), .95);
             
         }
     }
@@ -59,34 +59,35 @@
         }
 
         &__icon {
-            font-size: 1.5rem;
+            font-size: 2rem;
+            padding: .25em;
             cursor: pointer;
 
             &.open {
-                color: hsla(var(--clr-white), .95);
-
+                background-color: hsla(var(--clr-black), .5);
+                border-radius: 50%;
                 @media screen and (min-width: 700px) {
                     display: none;
                 }
             }
 
             &.close {
-                color: hsla(var(--clr-black), .95);
+                color: hsla(var(--clr-black), .75);
                 align-self: flex-end;
-                margin: 1em var(--padding-left);  
+                margin: .625em var(--padding-left) 1em; 
             } 
         }
 
         &__side-nav {
             position: fixed;
-            background-color: hsla(var(--clr-white), 1);
+            background-color: hsla(var(--clr-white), .95);
+            backdrop-filter: blur(5px);
             top: 0;
             right: 0;
             width: 320px;
             height: 100vh;
             display: flex;
             flex-direction: column;
-            // transform: translateX(100%);
         }
 
         &__list {
@@ -122,7 +123,7 @@
             }
 
             &__link {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
                 color: hsla(var(--clr-black), .75);
             }
 

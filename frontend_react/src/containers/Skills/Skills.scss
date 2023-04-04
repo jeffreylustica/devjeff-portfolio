@@ -1,10 +1,11 @@
 .skills {
     min-height: 100vh;
-    padding-top: 5em;    
+    padding-top: 5em;
+    padding-bottom: 3em;  
 
     &__heading {
         text-align: center;
-        margin-bottom: 2em;
+        margin-bottom: 3em;
     }
 
     &__list {
@@ -20,11 +21,15 @@
             align-items: center;
 
             &__wrapper {
-                // width: 5em;
-                // height: 5em;
+                width: 5.5em;
+                height: 5.5em;
                 padding: 1em;
                 border-radius: 50%;
                 background-color: hsla(var(--clr-white), .95);
+
+                &:hover {
+                    background-color: hsla(var(--clr-white), .75);
+                }
             }
 
             &__name {

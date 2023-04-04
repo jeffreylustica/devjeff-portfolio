@@ -1,6 +1,7 @@
 .works {
     min-height: 100vh;
     padding-top: 5em;
+    padding-bottom: 3em;
 
     &__heading {
         text-align: center;
@@ -12,12 +13,19 @@
         flex-wrap: wrap;
 
         &__btn {
+            font-size: var(--fs-sm);
             margin: 0 1em 1em;
             border: none;
-            background-color: hsla(var(--clr-white), .95);
-            padding: .5em 1.5em;
+            // background-color: hsla(var(--clr-white), .95);
+            padding: .375em 1.5em;
             border-radius: .375em;
             cursor: pointer;
+            transition: all 300ms ease-in-out;
+        }
+
+        .active-btn {
+            color: hsla(var(--clr-white), .95);
+            background-color: hsla(var(--clr-black), .5) !important;
         }
     }
 
@@ -29,13 +37,44 @@
 
         &__item {
             padding: 1em;
+            color: hsla(var(--clr-black), .75);
             background-color: hsla(var(--clr-white), .95);
             border-radius: .75em;
 
             &__image {
                 width: 100%;
-                object-fit: cover;
-                max-height: 200px;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    max-height: 200px;
+                }
+            }
+
+            &__links {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: hsla(var(--clr-black), .75);
+                transition: all 300ms ease-in-out;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &__link {
+                    font-size: 1.25em;
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    color: hsla(var(--clr-white), .95);
+                    background-color: hsla(var(--clr-white), .25);
+                    margin: 1em;
+                }
             }
 
             &__title {

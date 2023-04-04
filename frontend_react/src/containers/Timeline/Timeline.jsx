@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './Timeline.scss'
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi'
+import { motion } from 'framer-motion'
 import { urlFor, client } from '../../client'
 
 const Timeline = () => {
@@ -46,36 +47,61 @@ const Timeline = () => {
         <div className="timeline__events">
           {timeline.map((timeline, i) => (
             timeline.id === activeCard &&
-            <div className='timeline__card' key={i}>
+            <motion.div 
+              initial= {{x: 100, opacity:0}}
+              animate={{x: 0, opacity: 1}}
+              transition={{duration: 0.5, ease: 'easeInOut'}}
+              className='timeline__card' 
+              key={i}
+            >
               <img className='timeline__card__logo' src={urlFor(timeline.imgUrl)} alt='brand' />
               <div className='timeline__card__info'>
                 <p className='timeline__card__info__desc'>{timeline.description}</p>
                 <div className='timeline__card__info__name'>{timeline.company}</div>
                 <span className='timeline__card__info__date'>{timeline.fromDate} - {timeline.toDate}</span>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
         <div className="timeline__nav">
           {timeline.map((timeline, i) => (
             timeline.id === activeCard && (
               <div className='timeline__nav__chevron' key={i}>
-                <span className='timeline__nav__chevron__left flexCenter' onClick={slideLeft}><HiOutlineChevronLeft /></span>
+                <motion.span 
+                  whileHover={{backgroundColor: 'hsla(0, 0%, 0%, .5)', color: 'hsla(0, 0%,  100%, .95)'}}
+                  className='timeline__nav__chevron__left flexCenter' 
+                  onClick={slideLeft}>      
+                    <HiOutlineChevronLeft />
+                </motion.span>
                   <span className='timeline__nav__chevron__date'>{timeline.toDate}</span>
-                <span className='timeline__nav__chevron__right flexCenter' onClick={slideRight}><HiOutlineChevronRight /></span>        
+                <motion.span 
+                  whileHover={{backgroundColor: 'hsla(0, 0%, 0%, .5)', color: 'hsla(0, 0%, 100%, .95)'}}
+                  className='timeline__nav__chevron__right flexCenter' 
+                  onClick={slideRight}>
+                    <HiOutlineChevronRight />
+                </motion.span>        
               </div>
             )
           ))}
           {timeline.map((timeline, i) => (
             <div className='timeline__nav__btn' key={i}>
-              <div className='timeline__nav__dot' onClick={() => changeActive(i)}></div>
+              <div 
+                className={`timeline__nav__dot ${activeCard === i && 'dot-active'}`} 
+                onClick={() => changeActive(i)}>
+              </div>
               <span className='timeline__nav__date'>{timeline.toDate}</span>
             </div>
           ))}
         </div>
         <div className='timeline__brands'>
             {brands.map((brand, i) => (
-              <img key={i} src={urlFor(brand.imgUrl)} alt="brand-logo" className='timeline__brands__img'/>
+              <motion.img 
+              whileHover={{filter: 'grayscale(0)'}}
+              key={i} 
+              src={urlFor(brand.imgUrl)} 
+              alt="brand-logo" 
+              className='timeline__brands__img'
+            />
             ))}
         </div>
       </div>

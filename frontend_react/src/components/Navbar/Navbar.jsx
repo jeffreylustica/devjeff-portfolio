@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import './Navbar.scss'
 import { images } from '../../constants'
-import { FaFacebook, FaLinkedin, FaGithub, FaFileDownload } from 'react-icons/fa'
+import { FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa'
+import { ImDownload2 } from 'react-icons/im'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -11,11 +12,10 @@ const Navbar = () => {
   const linksVariants = {
     hover: {
       scale: 1.2, 
-      color: 'hsla(101, 46%, 65%, .95)',
+      color: 'hsla(150,69%,65%,1)',
       originX: 0
     },
     menuBtnHover: {
-      boxShadow: '0 8px 8px hsla(0, 0%, 0%, .5)', 
       scale: 1.1
     }
   }
@@ -28,7 +28,7 @@ const Navbar = () => {
         {['home', 'about', 'works', 'skills', 'timeline', 'contact'].map(link => (
           <li key={link} className='navbar__item'>
               <motion.a 
-                whileHover={{boxShadow: '0 8px 8px hsla(0, 0%, 0%, .25)', color: 'hsla(0, 0%, 0%, .75)'}}
+                whileHover={{boxShadow: '0 4px 4px hsla(0, 0%, 0%, .5)'}}
                 href={`#${link}`}>
                     {link}
               </motion.a>
@@ -72,7 +72,7 @@ const Navbar = () => {
 
               <div className='navbar__menu__social'>
                 <div className='navbar__menu__social__list'>
-                  {[FaFacebook, FaLinkedin, FaGithub].map((NavIcon, i) => (
+                  {[FaFacebookF, FaLinkedinIn, FaGithub].map((NavIcon, i) => (
                       <motion.a
                         variants={linksVariants}
                         whileHover='hover'
@@ -83,11 +83,11 @@ const Navbar = () => {
                   ))}
                 </div>
                 <motion.a 
-                  whileHover={{scale: 1.1, boxShadow: '0 4px 6px hsla(0, 0%, 0%, .5)'}}
+                  whileHover={{scale: 1.05, boxShadow: '0 4px 6px hsla(0, 0%, 0%, .5)'}}
                   href='{}' 
                   download='jeffrey-lustica-resume' 
                   className='navbar__menu__social__resume'>
-                <FaFileDownload /> Resume
+                <ImDownload2 /> Resume
                 </motion.a>
               </div>
 

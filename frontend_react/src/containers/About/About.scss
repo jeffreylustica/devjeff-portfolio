@@ -37,8 +37,8 @@
 
         &__resume {
             display: inline-block;
-            color: hsla(var(--clr-black), .75);
-            background-color: hsla(var(--clr-white), .5);
+            color: hsla(var(--clr-white), .95);
+            background-color: hsla(var(--clr-accent), .95);
             padding: .75em 1.5em;
             border-radius: 5em;
         }

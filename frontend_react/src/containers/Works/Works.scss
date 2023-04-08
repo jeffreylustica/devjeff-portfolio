@@ -16,7 +16,8 @@
             font-size: var(--fs-sm);
             margin: 0 1em 1em;
             border: none;
-            // background-color: hsla(var(--clr-white), .95);
+            color: hsla(var(--clr-text), .875);
+            background-color: hsla(var(--clr-white), 1);
             padding: .375em 1.5em;
             border-radius: .375em;
             cursor: pointer;
@@ -25,7 +26,7 @@
 
         .active-btn {
             color: hsla(var(--clr-white), .95);
-            background-color: hsla(var(--clr-black), .5) !important;
+            background-color: hsla(var(--clr-accent), .75) !important;
         }
     }
 

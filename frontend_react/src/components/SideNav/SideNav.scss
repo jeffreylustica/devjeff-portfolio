@@ -16,7 +16,7 @@
 
         &__resume, &__icon {
             font-size: 1.125rem;
-            color: hsla(var(--clr-white), .95);
+            color: hsla(var(--clr-text), .95);
             border-radius: 50%;
             width: 1.75em;
             height: 1.75em;
@@ -40,7 +40,7 @@
 
         &__icon {
             margin-bottom: .75em;
-            background-color: hsla(var(--clr-white), .25);
+            background-color: hsla(var(--clr-white), .75);
         }
     }
 }

@@ -12,7 +12,7 @@ const Navbar = () => {
   const linksVariants = {
     hover: {
       scale: 1.2, 
-      color: 'hsla(150,69%,65%,1)',
+      color: 'hsla(0, 0%, 100%, .95)',
       originX: 0
     },
     menuBtnHover: {
@@ -28,7 +28,7 @@ const Navbar = () => {
         {['home', 'about', 'works', 'skills', 'timeline', 'contact'].map(link => (
           <li key={link} className='navbar__item'>
               <motion.a 
-                whileHover={{boxShadow: '0 4px 4px hsla(0, 0%, 0%, .5)'}}
+                whileHover={{color: 'hsla(0, 0%, 100%, .95)'}}
                 href={`#${link}`}>
                     {link}
               </motion.a>

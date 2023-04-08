@@ -24,7 +24,9 @@ const Skills = () => {
             <motion.div 
               key={i} 
               className="skills__list__item" 
+              initial= {{scale: 0}}
               whileHover={{scale: 1.075}}
+              whileInView={{scale: 1, transition: {delay: i - (i *.95)}}}
             >
               <div className='skills__list__item__wrapper flexCenter'>
                 <img src={urlFor(skill.imgUrl)} className="skills__list__item__icon" />

@@ -40,13 +40,16 @@ const Contact = () => {
       <div className="container">
         <h2 className="contact__heading">Let's connect</h2>
         <p className='contact__intro'>Just send me a message on the form below and I will get back to you as soon as I can.</p>
-        <div className="contact__option flexCenter">
+        <motion.div 
+          className="contact__option flexCenter"
+          whileInView={{y: [-100, 0], opacity: [0, 1], transition: {duration: .3, delay: .3}}}
+        >
           <div className="contact__option__details flexCenter">
             <HiPhone />
             <motion.a 
               href="tel:+639060078013" 
               rel="noreferrer"
-              whileHover={{scale: 1.075, color: 'hsla(0, 0%, 0%, .5)'}}
+              whileHover={{color: 'hsla(165, 80%, 43%, .95)'}}
             >
               {contactDetails[0]?.phone}
             </motion.a>
@@ -57,7 +60,7 @@ const Contact = () => {
               href="mailto:jefflustica2@gmail.com" 
               target="_blank" 
               rel="noreferrer"
-              whileHover={{scale: 1.075, color: 'hsla(0, 0%, 0%, .5)'}}
+              whileHover={{color: 'hsla(165, 80%, 43%, .95)'}}
             >
               {contactDetails[0]?.email}
             </motion.a>
@@ -65,19 +68,26 @@ const Contact = () => {
           <div className="contact__option__details flexCenter">
             <HiLocationMarker /><span>{contactDetails[0]?.address}</span>
           </div>
-        </div>
+        </motion.div>
 
-        {messageSent ? (<div className="contact__success">
-          <h1 className="contact__success__confirmation">Thank you!</h1>
-          <p className='modal__success__message'>Your message has been successfully sent. I will contant you soon.</p>
-        </div>
+        {messageSent ? (
+          <div className="contact__success">
+            <h1 className="contact__success__confirmation">Thank you!</h1>
+            <p className='modal__success__message'>Your message has been successfully sent. I will contant you soon.</p>
+          </div>
         ) : (
-          <form onSubmit={sendEmail} ref={formRef} className='contact__form'>
+          <motion.form 
+            onSubmit={sendEmail} 
+            ref={formRef} 
+            className='contact__form'
+            whileInView={{opacity: [0, 1], x:[100, 0], transition: {delay: .5}}}
+          >
           <input type="text" name="user_name" className="contact__form__name" placeholder='Name' required />
           <input type="email" name="user_email" className="contact__form__email" placeholder='Email' required />
           <textarea name="message" id="" cols="30" rows="10" className="contact__form__message" placeholder='Message' required></textarea>
           <motion.button
-            whileHover={{scale: 1.07, color: 'hsla(0, 0%, 0%, .95)', backgroundColor: 'hsla(0, 0%, 100%, 1)'}} 
+            whileHover={{scale: 1.05, color: 'hsla(0, 0%, 100%, .95)', backgroundColor: 'hsla(165, 80%, 43%, .75)', boxShadow: '0 4px 4px hsla(0, 0%, 0%, .5)'}} 
+            whileInView={{opacity: [0, 1], transition: {delay: .7, duration: .5}}}
             type='submit' 
             className='contact__form__submit'
             disabled={loading ? true : false}
@@ -85,7 +95,7 @@ const Contact = () => {
           >
               {loading ? "Sending..." : "Send Message"}
           </motion.button>
-        </form>
+        </motion.form>
         )}
       </div>
     </div>

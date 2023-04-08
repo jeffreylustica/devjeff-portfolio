@@ -11,14 +11,14 @@ const SideNav = () => {
     hover: {
       scale: 1.1, 
       originX: 0,
-      color: 'hsla(0, 0%, 0%, .75)',
-      backgroundColor: 'hsla(0, 0%, 100%, 1)'
+      color: 'hsla(0, 0%, 100%, .95)',
+      backgroundColor: 'hsla(165, 80%, 43%, .75)'
     }
   }
   return (
     <div className='nav__links'>
         <motion.a 
-          whileHover={{scale: 1.1, originX: 0}}
+          whileHover={{color: 'hsla(0, 0%, 100%, .95)'}}
           href='{}' 
           download='jeffrey-lustica-resume' 
           className='nav__links__resume'

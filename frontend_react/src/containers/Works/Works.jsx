@@ -43,7 +43,8 @@ const Works = () => {
               key={i} 
               type='button' 
               className={`works__filters__btn ${activeFilter === category && 'active-btn'}`}
-              whileHover={{scale: 0.95, backgroundColor:'hsla(0, 0%, 100%, .75)'}}
+              whileHover={{backgroundColor:'hsla(165, 80%, 43%, .125)'}}
+              whileInView={{scale:[0, 1]}}
               onClick={() => handleWorkFilter(category)}
             >
               {category}

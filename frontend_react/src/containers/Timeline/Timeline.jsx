@@ -48,9 +48,10 @@ const Timeline = () => {
           {timeline.map((timeline, i) => (
             timeline.id === activeCard &&
             <motion.div 
-              initial= {{x: 100, opacity:0}}
+              initial= {{x: 200, opacity:0}}
               animate={{x: 0, opacity: 1}}
               transition={{duration: 0.5, ease: 'easeInOut'}}
+              whileInView={{opacity: [0, 1], transition: {duration: .5, delay: .3}}}
               className='timeline__card' 
               key={i}
             >
@@ -97,6 +98,7 @@ const Timeline = () => {
             {brands.map((brand, i) => (
               <motion.img 
               whileHover={{filter: 'grayscale(0)'}}
+              whileInView={{opacity: [0, 1], transition: {duration: .5, delay: i - (i * .5)}}}
               key={i} 
               src={urlFor(brand.imgUrl)} 
               alt="brand-logo" 

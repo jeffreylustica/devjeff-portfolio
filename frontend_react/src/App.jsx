@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.scss'
-import { About, Contact, Home, Skills, Timeline, Works } from './containers'
+import { About, Contact, Home, Skills, Timeline, Works, Footer } from './containers'
 import { Navbar, SideNav } from './components'
 
 const App = () => {
@@ -8,6 +8,7 @@ const App = () => {
     <div className='app'>
       <Navbar />
       <SideNav />
+      <Footer coprClass="desktop-class"/>
 
       <Home />
       <About />

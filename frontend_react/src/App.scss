@@ -8,49 +8,11 @@ body {
     font-size: var(--fs-body);
     font-weight: var(--fw-regular);
     color: hsla(var(--clr-text), 1);
-
-//     background-color:#99ffc5;
-// background-image:
-// radial-gradient(at 37% 64%, hsla(57,81%,77%,1) 0px, transparent 50%),
-// radial-gradient(at 76% 51%, hsla(65,83%,75%,1) 0px, transparent 50%),
-// radial-gradient(at 89% 70%, hsla(242,76%,79%,1) 0px, transparent 50%),
-// radial-gradient(at 90% 51%, hsla(206,82%,71%,1) 0px, transparent 50%),
-// radial-gradient(at 17% 74%, hsla(221,86%,71%,1) 0px, transparent 50%),
-// radial-gradient(at 65% 38%, hsla(217,65%,78%,1) 0px, transparent 50%),
-// radial-gradient(at 20% 36%, hsla(323,71%,70%,1) 0px, transparent 50%);
-
-// background-color:hsla(212,69%,37%,1);
-// background-image:
-// radial-gradient(at 77% 1%, hsla(190,100%,87%,1) 0px, transparent 50%),
-// radial-gradient(at 40% 100%, hsla(139,79%,77%,1) 0px, transparent 50%),
-// radial-gradient(at 52% 51%, hsla(190,48%,70%,1) 0px, transparent 50%);
-
-// background-color:hsl(181, 90%, 24%);
-// background-image:
-// radial-gradient(at 84% 2%, hsla(139,79%,77%,1) 0px, transparent 50%),
-// radial-gradient(at 40% 100%, hsla(139,79%,77%,1) 0px, transparent 50%),
-// radial-gradient(at 54% 45%, hsla(139,79%,77%,1) 0px, transparent 50%);
-
-// background-color:#24a15a;
-// background-image:
-// radial-gradient(at 37% 64%, rgb(148, 142, 38) 0px, transparent 50%),
-// radial-gradient(at 76% 51%, rgb(137, 146, 35) 0px, transparent 50%),
-// radial-gradient(at 89% 70%, rgb(110, 109, 202) 0px, transparent 50%),
-// radial-gradient(at 90% 51%, rgb(32, 118, 184) 0px, transparent 50%),
-// radial-gradient(at 17% 74%, rgb(31, 82, 192) 0px, transparent 50%),
-// radial-gradient(at 65% 38%, rgb(29, 91, 191) 0px, transparent 50%),
-// radial-gradient(at 20% 36%, rgb(167, 74, 131) 0px, transparent 50%);
-
-    // background-image: url('./assets/blurry-gradient-haikei.png');
-    // background-repeat: no-repeat;
-    // background-size: cover;
     
     background-color:hsla(0, 10%, 86%, 0.8);
     background-image:
     radial-gradient(at 100% 100%, hsla(203, 61%, 69%, 0.8) 0px, transparent 50%),
     radial-gradient(at 0% 0%, hsla(178,75%,75%,0.8) 0px, transparent 50%);
-    
-
 }
   
 img {

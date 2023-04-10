@@ -90,7 +90,7 @@ const Timeline = () => {
                 className={`timeline__nav__dot ${activeCard === i && 'dot-active'}`} 
                 onClick={() => changeActive(i)}>
               </div>
-              <span className='timeline__nav__date'>{timeline.toDate}</span>
+              <span className={`timeline__nav__date ${activeCard === i && 'date-active'}`}>{timeline.toDate}</span>
             </div>
           ))}
         </div>

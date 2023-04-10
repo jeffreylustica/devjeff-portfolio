@@ -105,7 +105,7 @@
         &__dot {
             width: 15px;
             height: 15px;
-            background-color: hsla(var(--clr-white), .75);
+            background-color: hsla(var(--clr-white), .95);
             border-radius: 50%;
             cursor: pointer;
             margin-bottom: .5em;
@@ -122,6 +122,11 @@
 
         &__date {
             font-size: .625rem;
+            color: hsla(var(--clr-text), .5);
+        }
+
+        .date-active {
+            color: hsla(var(--clr-text), .95);
         }
     }
 

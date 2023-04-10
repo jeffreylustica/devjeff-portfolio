@@ -5,13 +5,14 @@ import { FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa'
 import { ImDownload2 } from 'react-icons/im'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Footer } from '../../containers'
 
 const Navbar = () => {
   const [menuToggle, setMenuToggle] = useState(false)
 
   const linksVariants = {
     hover: {
-      scale: 1.2, 
+      scale: 1.1, 
       color: 'hsla(0, 0%, 100%, .95)',
       originX: 0
     },
@@ -72,13 +73,16 @@ const Navbar = () => {
 
               <div className='navbar__menu__social'>
                 <div className='navbar__menu__social__list'>
-                  {[FaFacebookF, FaLinkedinIn, FaGithub].map((NavIcon, i) => (
+                  {[{socialIcon:FaFacebookF, socialLink: 'https://www.facebook.com/jeffrey.lustica.9'},
+          {socialIcon:FaLinkedinIn, socialLink: 'https://www.linkedin.com/in/jeffrey-lustica-8178b5229'}, {socialIcon:FaGithub, socialLink: 'https://github.com/jeffreylustica'}].map((Nav, i) => (
                       <motion.a
                         variants={linksVariants}
                         whileHover='hover'
-                        href='' 
+                        href={Nav.socialLink}
+                        target="_blank"  
+                        rel="noreferrer"
                         key={i} 
-                        className='navbar__menu__social__link'><NavIcon key={i}/>
+                        className='navbar__menu__social__link'><Nav.socialIcon key={i}/>
                       </motion.a>         
                   ))}
                 </div>
@@ -90,13 +94,12 @@ const Navbar = () => {
                 <ImDownload2 /> Resume
                 </motion.a>
               </div>
-
+              <Footer coprClass="mobile-class"/>
             </motion.nav>
           )}
         </AnimatePresence>
         
       </div>
-
     </nav>
   )
 }

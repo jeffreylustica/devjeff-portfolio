@@ -36,7 +36,7 @@ const Works = () => {
   return (
     <div id='works' className='works'>
       <div className="container">
-        <h2 className="works__heading">My Works</h2>
+        <h2 className="works__heading">Projects</h2>
         <div className="works__filters flexCenter">
           {['All','Web App', 'Mobile App', 'React JS'].map((category, i) => (
             <motion.button 

@@ -26,14 +26,14 @@ const About = () => {
             variants={inViewVariants}
             whileInView='showY'
           >
-              I'M JEFFREY
+            WELCOME!
           </motion.h1>
           <motion.p 
             className='about__right__desc'
             variants={inViewVariants}
             whileInView='showY'
           > 
-            I am front-end developer with a passion for building beautiful  and functional web applications. I am a front-end developer with a passion for building beautiful  and functional web applications. I am a front-end developer with a passion for building beautiful  and functional web applications. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta praesentium inventore magni accusamus saepe suscipit maxime, harum quos tempore ipsam a, dolorum consequatur qui. Quisquam obcaecati quos deserunt perferendis voluptatibus?
+            I'm Jeffrey Lustica, a front-end developer aspirant. I graduated with a Bachelor of Science in Information Technology degree and a Cum Laude at ACLC College Baliuag. I made the decision to return to web programming, so I enrolled in and finished the courses at an online coding school after working in a BPO company for five years as a data analyst. I'm now capable of developing a highly interactive web application using the latest web technologies. You can check out my work and skills below. If you are interested in working with me, feel free to get in touch.
           </motion.p>
           <motion.a 
             className='about__right__resume' 
@@ -43,7 +43,7 @@ const About = () => {
             whileInView='show'
             whileHover={{scale: 1.05, color: 'hsla(0, 0%, 100%, .95)', backgroundColor: 'hsla(165, 80%, 43%, .75)', boxShadow: '0 4px 4px hsla(0, 0%, 0%, .5)'}} 
           >
-              Download my resume
+              Download CV
           </motion.a>
         </div>
       </div>

@@ -16,7 +16,7 @@ const Home = () => {
           whileInView={{opacity: [0, 1], x: [-100, 0], transition: {duration: .5, delay: .3}}}
         >
           <h1 className='home__main__primary'>Offers a seamless and engaging user experience.</h1>
-          <p className='home__main__secondary'>Let me build you a structured, easy-to-use and well-crafted web application.</p>
+          <p className='home__main__secondary'>Let me build you a structured, easy-to-use and well-planned web application.</p>
           <a href='#about' className='home__main__btn-more'>
             <motion.span 
               className='btn-scroll'

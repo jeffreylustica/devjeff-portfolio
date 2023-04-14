@@ -86,10 +86,11 @@ const Timeline = () => {
           ))}
           {timeline.map((timeline, i) => (
             <div className='timeline__nav__btn' key={i}>
-              <div 
+              <motion.div 
+                whileHover={{backgroundColor: 'hsla(167, 94%, 12%, .75)'}}
                 className={`timeline__nav__dot ${activeCard === i && 'dot-active'}`} 
                 onClick={() => changeActive(i)}>
-              </div>
+              </motion.div>
               <span className={`timeline__nav__date ${activeCard === i && 'date-active'}`}>{timeline.toDate}</span>
             </div>
           ))}

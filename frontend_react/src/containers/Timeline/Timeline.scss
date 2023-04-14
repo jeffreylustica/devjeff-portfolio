@@ -117,7 +117,7 @@
         }
 
         .dot-active {
-            background-color: hsla(var(--clr-text), .75);
+            background-color: hsla(var(--clr-text), .75) !important;
         }
 
         &__date {

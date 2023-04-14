@@ -87,7 +87,7 @@ const Contact = () => {
           <textarea name="message" id="" cols="30" rows="10" className="contact__form__message" placeholder='Message' required></textarea>
           <motion.button
             whileHover={{scale: 1.05, color: 'hsla(0, 0%, 100%, .95)', backgroundColor: 'hsla(165, 80%, 43%, .75)', boxShadow: '0 4px 4px hsla(0, 0%, 0%, .5)'}} 
-            whileInView={{opacity: [0, 1], transition: {delay: .7, duration: .5}}}
+            whileInView={{opacity: [0, 1], transition: {delay: .6, duration: .5}}}
             type='submit' 
             className='contact__form__submit'
             disabled={loading ? true : false}

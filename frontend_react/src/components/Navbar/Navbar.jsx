@@ -6,9 +6,11 @@ import { ImDownload2 } from 'react-icons/im'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Footer } from '../../containers'
+import useFetchResume from '../../hooks/useFetchResume'
 
 const Navbar = () => {
   const [menuToggle, setMenuToggle] = useState(false)
+  const {resume} = useFetchResume()
 
   const linksVariants = {
     hover: {
@@ -88,8 +90,10 @@ const Navbar = () => {
                 </div>
                 <motion.a 
                   whileHover={{scale: 1.05, boxShadow: '0 4px 6px hsla(0, 0%, 0%, .5)'}}
-                  href='{}' 
+                  href={resume[0]?.url} 
                   download='jeffrey-lustica-resume' 
+                  target='_blank'
+                  rel="noreferrer"
                   className='navbar__menu__social__resume'>
                 <ImDownload2 /> Resume
                 </motion.a>

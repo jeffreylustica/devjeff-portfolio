@@ -5,8 +5,11 @@ import { ImDownload2 } from 'react-icons/im'
 import { motion } from 'framer-motion'
 import { Tooltip } from 'react-tooltip'
 import 'react-tooltip/dist/react-tooltip.css'
+import useFetchResume from '../../hooks/useFetchResume'
 
 const SideNav = () => {
+  const {resume} = useFetchResume()
+
   const iconVariants = {
     hover: {
       scale: 1.1, 
@@ -19,8 +22,9 @@ const SideNav = () => {
     <div className='nav__links'>
         <motion.a 
           whileHover={{color: 'hsla(0, 0%, 100%, .95)'}}
-          href='{}' 
-          download='jeffrey-lustica-resume' 
+          href={resume[0]?.url} 
+          download='jeffrey-lustica-resume'
+          target='_blank' 
           className='nav__links__resume'
           data-tooltip-id='resume-tooltip'
           data-tooltip-content='Resume'

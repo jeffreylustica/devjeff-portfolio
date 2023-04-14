@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './About.scss'
 import { motion } from 'framer-motion'
+import useFetchResume from '../../hooks/useFetchResume'
 
 const About = () => {
+  const {resume} = useFetchResume()
 
   const inViewVariants = {
     showX: {x: [-100, 0], opacity: [0, 1], transition:{delay: .2, duration: .5}},
@@ -37,8 +39,10 @@ const About = () => {
           </motion.p>
           <motion.a 
             className='about__right__resume' 
-            href='{}' 
+            href={resume[0]?.url}
             download='jeffrey-lustica-resume'
+            target='_blank'
+            rel="noreferrer"
             variants={inViewVariants}
             whileInView='show'
             whileHover={{scale: 1.05, color: 'hsla(0, 0%, 100%, .95)', backgroundColor: 'hsla(165, 80%, 43%, .75)', boxShadow: '0 4px 4px hsla(0, 0%, 0%, .5)'}} 

@@ -1,7 +1,5 @@
 import React, { useRef } from 'react'
 import './Home.scss'
-import { SlArrowDown } from 'react-icons/sl'
-import { images } from './../../constants'
 import { motion, useInView } from 'framer-motion'
 
 const Home = () => {

@@ -1,4 +1,3 @@
-import React from 'react'
 import './SideNav.scss'
 import { FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa'
 import { ImDownload2 } from 'react-icons/im'

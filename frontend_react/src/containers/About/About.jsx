@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react'
 import './About.scss'
 import { motion } from 'framer-motion'
 import useFetchResume from '../../hooks/useFetchResume'

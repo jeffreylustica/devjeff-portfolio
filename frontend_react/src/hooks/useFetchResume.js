@@ -1,19 +1,19 @@
-import { useState, useEffect } from 'react'
-import { client } from '../client'
+// import { useState, useEffect } from 'react'
+// import { client } from '../client'
 
-const useFetchResume = () => {
-    const [resume, setResume] = useState([])
+// const useFetchResume = () => {
+//     const [resume, setResume] = useState([])
 
-    useEffect(() => {
-        const query =  '*[_type == "assets"]{"url": file.asset->url}'
-    
-        client.fetch(query)
-          .then(data => {
-            setResume(data)
-          })
-      }, [])
+//     useEffect(() => {
+//         const query =  '*[_type == "assets"]{"url": file.asset->url}'
 
-    return {resume}
-}
+//         client.fetch(query)
+//           .then(data => {
+//             setResume(data)
+//           })
+//       }, [])
 
-export default useFetchResume
+//     return {resume}
+// }
+
+// export default useFetchResume

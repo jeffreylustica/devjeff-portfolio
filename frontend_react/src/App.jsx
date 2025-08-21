@@ -44,7 +44,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <Navbar />
+      <Navbar personalDetails={personalDetails} resume={resume} />
       <SideNav personalDetails={personalDetails} resume={resume} />
       <Footer coprClass="desktop-class" />
 

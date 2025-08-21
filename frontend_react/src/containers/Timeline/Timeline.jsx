@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./Timeline.scss";
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
 import { motion } from "framer-motion";
-import { fetchDocuments } from "../../components/services/apiService";
+import { fetchDocuments } from "../../services/apiService";
 
 const options = {
   year: "numeric",

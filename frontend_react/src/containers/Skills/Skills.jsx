@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Skills.scss";
 import { motion } from "framer-motion";
-import { fetchDocuments } from "../../components/services/apiService";
+import { fetchDocuments } from "../../services/apiService";
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);

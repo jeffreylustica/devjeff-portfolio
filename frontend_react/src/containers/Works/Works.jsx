@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./Works.scss";
 import { FaEye, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { fetchDocuments } from "../../components/services/apiService";
+import { fetchDocuments } from "../../services/apiService";
 
 const Works = () => {
   const [works, setWorks] = useState([]);

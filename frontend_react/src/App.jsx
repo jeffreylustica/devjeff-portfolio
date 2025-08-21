@@ -10,7 +10,7 @@ import {
   Footer,
 } from "./containers";
 import { Navbar, SideNav } from "./components";
-import { fetchDocuments } from "./components/services/apiService";
+import { fetchDocuments } from "./services/apiService";
 
 const App = () => {
   const [personalDetails, setPersonalDetails] = useState([]);

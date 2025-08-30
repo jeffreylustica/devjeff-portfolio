@@ -39,15 +39,13 @@ const About = ({ resume }) => {
             variants={inViewVariants}
             whileInView="showY"
           >
-            I'm Jeffrey Lustica, a front-end developer aspirant. I graduated
-            with a Bachelor of Science in Information Technology degree and a
-            Cum Laude at ACLC College Baliuag. I made the decision to return to
-            web programming, so I enrolled in and finished the courses at an
-            online coding school after working in a BPO company for five years
-            as a data analyst. I'm now capable of developing a highly
-            interactive web application using the latest web technologies. You
-            can check out my work and skills below. If you are interested in
-            working with me, feel free to get in touch.
+            Hi! I’m Jeffrey Lustica, a frontend developer with 2 years of
+            experience building responsive, user-focused web applications. I
+            graduated with a Bachelor of Science in Information Technology (Cum
+            Laude) from ACLC College Baliuag and have since specialized in
+            creating clean, scalable solutions using modern web technologies.
+            You can explore my work and skills below, and feel free to reach out
+            if you’d like to work together.
           </motion.p>
           <motion.a
             className="about__right__resume"

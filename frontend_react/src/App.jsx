@@ -46,8 +46,6 @@ const App = () => {
     <div className="app">
       <Navbar personalDetails={personalDetails} resume={resume} />
       <SideNav personalDetails={personalDetails} resume={resume} />
-      <Footer coprClass="desktop-class" />
-
       <Home />
       <About resume={resume} />
       <Works />

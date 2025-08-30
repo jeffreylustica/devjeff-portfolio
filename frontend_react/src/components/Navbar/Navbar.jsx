@@ -129,7 +129,6 @@ const Navbar = ({ personalDetails, resume }) => {
                   <ImDownload2 /> Resume
                 </motion.a>
               </div>
-              <Footer coprClass="mobile-class" />
             </motion.nav>
           )}
         </AnimatePresence>

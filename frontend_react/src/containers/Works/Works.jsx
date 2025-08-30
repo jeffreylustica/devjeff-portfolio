@@ -9,14 +9,24 @@ const Works = () => {
   const [filteredWorks, setFilteredWorks] = useState([]);
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     const getDocuments = async () => {
       try {
         const res = await fetchDocuments("projects");
         const data = await res.json();
+        console.log(data.documents);
         setWorks(data.documents);
         setFilteredWorks(data.documents);
+        setCategories(() => {
+          const allTags = data.documents.flatMap((item) =>
+            item.tags.map((tag) => tag.text)
+          );
+          const uniqueTags = [...new Set(allTags)];
+          console.log(uniqueTags);
+          return uniqueTags;
+        });
       } catch (error) {
         console.log(error);
       }
@@ -46,7 +56,7 @@ const Works = () => {
       <div className="container">
         <h2 className="works__heading">Projects</h2>
         <div className="works__filters flexCenter">
-          {["All", "Web App", "Mobile App", "React JS"].map((category, i) => (
+          {categories.map((category, i) => (
             <motion.button
               key={i}
               type="button"
@@ -57,7 +67,7 @@ const Works = () => {
               whileInView={{ scale: [0, 1] }}
               onClick={() => handleWorkFilter(category)}
             >
-              {category}
+              {category.toUpperCase()}
             </motion.button>
           ))}
         </div>

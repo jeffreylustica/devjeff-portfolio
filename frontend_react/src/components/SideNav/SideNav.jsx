@@ -34,10 +34,10 @@ const SideNav = ({ personalDetails, resume }) => {
         <ImDownload2 />
       </motion.a>
       {[
-        {
-          socialIcon: FaFacebookF,
-          socialLink: links.facebook,
-        },
+        // {
+        //   socialIcon: FaFacebookF,
+        //   socialLink: links.facebook,
+        // },
         {
           socialIcon: FaLinkedinIn,
           socialLink: links.linkedIn,

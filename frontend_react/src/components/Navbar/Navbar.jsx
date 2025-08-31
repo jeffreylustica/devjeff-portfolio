@@ -89,10 +89,10 @@ const Navbar = ({ personalDetails, resume }) => {
               <div className="navbar__menu__social">
                 <div className="navbar__menu__social__list">
                   {[
-                    {
-                      socialIcon: FaFacebookF,
-                      socialLink: links.facebook,
-                    },
+                    // {
+                    //   socialIcon: FaFacebookF,
+                    //   socialLink: links.facebook,
+                    // },
                     {
                       socialIcon: FaLinkedinIn,
                       socialLink: links.linkedIn,

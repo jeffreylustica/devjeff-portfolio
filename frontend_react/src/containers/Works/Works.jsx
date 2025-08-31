@@ -16,7 +16,6 @@ const Works = () => {
       try {
         const res = await fetchDocuments("projects");
         const data = await res.json();
-        console.log(data.documents);
         setWorks(data.documents);
         setFilteredWorks(data.documents);
         setCategories(() => {
@@ -24,7 +23,6 @@ const Works = () => {
             item.tags.map((tag) => tag.text)
           );
           const uniqueTags = [...new Set(allTags)];
-          console.log(uniqueTags);
           return uniqueTags;
         });
       } catch (error) {

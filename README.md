@@ -1,12 +1,18 @@
-# devjeff-portfolio Web Developer Portfolio
-## This is my online portfolio built with React.Js Framework
+# devjeff-portfolio – Web Developer Portfolio
+A personal web developer portfolio built with ReactJS, designed to showcase my skills, projects, and professional background. The site features smooth animations, a modern UI, and dynamic content managed through my custom-built Portfolio CMS MERN App https://jeff-portfolio-cms.netlify.app/.
 
-This developer portfolio is built using the following web technologies:
+## Tech Stack
+* ReactJS – JavaScript framework for building the UI
+* Sass – CSS pre-processor for structured and reusable styling
+* Framer Motion – animation library for interactive UI effects
+* Portfolio CMS MERN App – custom-built CMS for man
+* Netlify – hosting and deployment
+  
+## Features
+* Responsive design for desktop and mobile
+* Dynamic portfolio content managed via custom MERN CMS
+* Smooth animations powered by Framer Motion
+* Modern and maintainable codebase with React + Sass
+* Fast deployment and hosting on Netlify
 
-* ReactJS as JavaScript framework and library
-* Saas CSS pre-processor for designing UI
-* Framer Motion for the animation
-* Sanity for the backend
-* Netlify for deploying and hosting the site
-
-You can visit the site here:  https://devjeff-portfolio.netlify.app/
+Live Demo https://devjeff-portfolio.netlify.app/

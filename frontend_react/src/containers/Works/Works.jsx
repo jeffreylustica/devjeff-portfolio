@@ -20,7 +20,7 @@ const Works = () => {
         setFilteredWorks(data.documents);
         setCategories(() => {
           const allTags = data.documents.flatMap((item) =>
-            item.tags.map((tag) => tag.text)
+            item.tags.map((tag) => tag.text.toLowerCase())
           );
           const uniqueTags = [...new Set(allTags)];
           return uniqueTags;
